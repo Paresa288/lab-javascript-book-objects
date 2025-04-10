@@ -100,7 +100,9 @@ for (const book of booksArray) {
 // Iteration 4 | Estimated Reading Time
 // Your code here:
 
-
+for (const book of booksArray) {
+  book.readingTime = Math.ceil((book.pages * 500) / 90);
+}
 
 
 // Bonus: Iteration 5 | Books Dictionary
