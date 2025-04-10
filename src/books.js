@@ -128,9 +128,37 @@ const dictionary = {
     ],
 };
 
-function booksByAuthor() {
+function booksByAuthor(dictionary) {
   // Your code here:
+  const arrayOfValues = Object.values(dictionary);
+  const arrayOfAuthors = Object.keys(dictionary);
+  const arrayOfBooks = [];
+  const bookObject = {}
+  for (const books of arrayOfValues) {
+
+    for(let i = 0; i < books.length; i++) {
+      const title = books[i][0];
+      const pages = books[i][1];
+      
+      
+      bookObject.title = title;
+      bookObject.pages = pages;
+      for (const author of arrayOfAuthors) {
+        bookObject.author = author;
+      }
+      
+      arrayOfBooks.push(bookObject);
+    }
+  }
+
   
+
+  
+
+    
+    
+  console.log(arrayOfAuthors)
+  return arrayOfBooks;
 }
 
 
