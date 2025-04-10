@@ -150,21 +150,24 @@ function booksByAuthor(dictionary) {
       arrayOfBooks.push(bookObject);
     }
   }
-
-  
-
-  
-
-    
-    
-  console.log(arrayOfAuthors)
   return arrayOfBooks;
 }
 
 
 
 // Bonus: Iteration 6 | Average Page Count
-function averagePageCount() {
+function averagePageCount(arrayOfBooks) {
   // Your code here:
-  
+  let numberOfBooks = 0;
+  let numberOfPages = 0;
+  for (const book of arrayOfBooks) {
+    numberOfBooks ++;
+    numberOfPages += book.pages;
+  }
+
+  return numberOfPages / numberOfBooks;
 }
+
+
+
+
